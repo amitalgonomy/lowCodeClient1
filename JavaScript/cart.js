@@ -45,7 +45,7 @@ function addToCart(productId,inputQuantity = 1) {
 function addCartToHTML() {
     let content = ``;
     cart.forEach((product, index) => {
-        let price = parseFloat(product.price.replace('$', ''));
+        let price = parseFloat(product.price);
         let totalPrice = price * product.quantity;
         content += `
         <div class="cart_product">
